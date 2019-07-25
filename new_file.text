@@ -34,11 +34,12 @@
      git remote add 主机名 主机地址    添加主机 
 
      
-     git push -u 主机名 本地分支:远程分支        建立追踪关系  建立与主机联系 后边可以省略主机名
+     git push -u 主机名 本地分支:远程分支        建立追踪关系  建立与主机联系 后边可以省略主机名 
+     git push -u 主机名 分支名                                 如果本地分支名=远程分支名可以只写一个名字
      git branch --set-upstream test origin/test  修改追踪关系  建立本地仓test 并建立追踪关系，如果建立了本地仓也建立了追踪会修改追踪关系
 
      git push                                    将现在所在分支推送到有追踪关系的远程分支
 
-     git push origin 远程分支名(与本地分支同名)  将现在所在分支推送到远程分支 没有则创建 不建立追踪关系
+  
      git push origin :远程分支名                 删除远程分支
     1
