@@ -1,0 +1,25 @@
+1 git安装
+   国内镜像网站 https://npm.taobao.org/mirrors/git-for-windows/
+2 配置用户名 邮箱
+  git config --global user.name "名字"
+  git config --global user.email "邮箱"
+3 生成公匙
+  ssh-keygen -t rsa -C "******@qq.com" 
+  .pub文件用来提交github
+4 创建本地版本库或者从github上创建仓库
+  建一个文件夹 然后进入创建的文件夹
+  git int 创建一个git可以管理的仓库 
+
+
+日常使用 git add 文件名 将文件修改添加到暂存区
+     git add.       添加所有未追踪文件
+
+     git commit  -m ""     提交到当前分支 -m后面为提交说明 
+     git status            查看仓库当前状态  
+     git diff   文件名     如果git status告诉你有文件被修改过 用gitdiff 查看更改了什么
+ 版本回退
+     git log                  用git log可以查看提交历史，以便确定要回退到哪个版本
+     git reflog               用git reflog查看命令历史，以便确定要回到未来的哪个版本
+     git reset --hard commit_id  回退版本 
+     git reset --soft            将差异放在暂存区 再commit之后与reset之前没区别
+     git reset --mixed           将差异放在工作区 add.commit之后与reset之前一样
