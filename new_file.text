@@ -1,8 +1,18 @@
  学习 https://www.liaoxuefeng.com/wiki/896043488029600/900004111093344
 
-笔记
+笔记  
+ 日常三部曲                      
+      git add .  
+      git commit -m ""
+      git push 
+  
+ 状态三命令
+      git status 
 
- 
+      git log 
+      
+      git reflog
+
 git安装
      国内镜像网站 https://npm.taobao.org/mirrors/git-for-windows/
 
@@ -88,7 +98,7 @@ git安装
      git push -u 主机名 分支名                                 如果本地分支名=远程分支名可以只写一个名字
      git branch --set-upstream test origin/test  建立(修改)追踪关系  建立本地仓test 并与远程主机origin的test分支建立追踪关系 
      
-     git push                                    将现在所在分支推送到有追踪关系的远程分支
+     git push                                    将现在所在分支推送到有追踪关系的远程分支  push之前可以git status查看是否关联主机
 
   
      git push origin :远程分支名                 删除远程分支
@@ -109,6 +119,12 @@ git安装
      
      git push origin :refs/tags/v0.9            删除远程分支 要先用-d删除本地 
      
+
+配简写
+
+      git config --global alias.缩写 命令名
+      git config --global alias.st status         git st 等于 git status
+      git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"  log的更明显看法
 
 -- - --空格
     Unix/Linux 命令中，- 后一般跟短命令选项（通常是单字母，也有一些命令是例外的），-- 后一般跟长命令选项。如果只有一个单独的--，后面不紧跟任何选项，则表示命令选项结束，后续的都作为命令的参数而不是选项。例如：
