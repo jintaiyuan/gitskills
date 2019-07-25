@@ -1,4 +1,9 @@
- git安装
+ 学习 https://www.liaoxuefeng.com/wiki/896043488029600/900004111093344
+
+笔记
+
+ 
+git安装
      国内镜像网站 https://npm.taobao.org/mirrors/git-for-windows/
 
  配置用户名 邮箱
@@ -12,6 +17,30 @@
      建一个文件夹 然后进入创建的文件夹
      git int 创建一个git可以管理的仓库 
 
+分支管理
+    git branch             查看分支
+ 
+    git branch <name>      创建分支
+
+    git checkout <name>    切换分支
+
+    git checkout -b <name> 创建+切换分支
+
+    git branch -d <name>   删除分支 有改变未提交使用-D强行删除
+
+    git merge <name>       合并某分支到当前分支 快速合并fast forward 看不出来曾经做过合并
+
+    git  merge --no-ff -m "" 不使用快速合并 可以看出来做过合并 所以需要加-m 分支合并图根上边也不一样
+   
+    git log --graph        可以看到分支合并图 *代表每次提交 最左边事主分支提交靠右是别的分支提交
+    
+    
+    当两个分支修改同一个文件的同一个内容时 合并会冲突 需要手动更改冲突 Git用<<<<<<<，=======，>>>>>>>标记出不同分支的内容
+                                                    <<<<<<< HEAD
+                                                    Creating a new branch is quick & simple.
+                                                    =======
+                                                    Creating a new branch is quick AND simple.
+                                                    >>>>>>> feature1
 
 日常使用 
      git add 文件名        将文件修改添加到暂存区 git对文件建立追踪
@@ -57,12 +86,29 @@
      
      git push -u 主机名 本地分支:远程分支        建立追踪关系  建立与主机联系 后边可以省略主机名 
      git push -u 主机名 分支名                                 如果本地分支名=远程分支名可以只写一个名字
-     git branch --set-upstream test origin/test  修改追踪关系  建立本地仓test 并建立追踪关系，如果建立了本地仓也建立了追踪会修改追踪关系
-
+     git branch --set-upstream test origin/test  建立(修改)追踪关系  建立本地仓test 并与远程主机origin的test分支建立追踪关系 
+     
      git push                                    将现在所在分支推送到有追踪关系的远程分支
 
   
      git push origin :远程分支名                 删除远程分支
+    
+     push失败先 git pull 拉取远程最新版本 再push 还不行手动更改本地与远程冲突文件内容后push
+
+打标签
+
+     git tag <tagname>                          用于新建一个标签，默认为HEAD，也可以指定一个commit id 比如 git tag <tagname> commitID
+
+     git tag -a <tagname> -m "blablabla..."     可以指定标签信息
+
+     git push origin <tagname>                  可以推送一个本地标签；
+
+     git push origin --tags可                   以推送全部未推送过的本地标签；
+
+     git tag -d <tagname>                       可以删除一个本地标签；
+     
+     git push origin :refs/tags/v0.9            删除远程分支 要先用-d删除本地 
+     
 
 -- - --空格
     Unix/Linux 命令中，- 后一般跟短命令选项（通常是单字母，也有一些命令是例外的），-- 后一般跟长命令选项。如果只有一个单独的--，后面不紧跟任何选项，则表示命令选项结束，后续的都作为命令的参数而不是选项。例如：
