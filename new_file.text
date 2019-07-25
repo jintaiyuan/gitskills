@@ -13,20 +13,41 @@
      git int 创建一个git可以管理的仓库 
 
 
-日常使用 git add 文件名 将文件修改添加到暂存区
-     git add.       添加所有未追踪文件
+日常使用 
+     git add 文件名        将文件修改添加到暂存区 git对文件建立追踪
+     git add.              添加所有未追踪文件
 
      git commit  -m ""     提交到当前分支 -m后面为提交说明 
      git status            查看仓库当前状态  
      git diff   文件名     如果git status告诉你有文件被修改过 用gitdiff 查看更改了什么 
 
- 版本回退
+ 版本回退及撤销
+    撤销
+
+    未追踪文件直接右键删除
+
+     add之前 
+
+     git  checkout -- 文件名  撤销最近一次修改 --后边必须加空格 
+     
+
+     commit之前 
+
+     git reset HEAD 文件名  将文件返回到工作区 HEAD指向当前工作版本 是git reset --mixed特殊用法
+
+    版本回退
+
      git log                  用git log可以查看提交历史，以便确定要回退到哪个版本
      git reflog               用git reflog查看命令历史，以便确定要回到未来的哪个版本
 
-     git reset --hard commit_id  回退版本 
-     git reset --soft            将差异放在暂存区 再commit之后与reset之前没区别
-     git reset --mixed           将差异放在工作区 add.commit之后与reset之前一样
+     git reset --hard commit_id  回退版本 工作区暂存区都不保留 版本差异清除 
+     git reset --soft            保留当前工作区和暂存区 将版本差异放在暂存区 再commit之后与reset之前没区别 工作区内容不变 暂存区为回退之前暂存区内容和版本差异内容
+     git reset --mixed           只保留工作区  将版本差异放在工作区 add.commit之后与reset之前一样 如果工作区和暂存区有东西 所有东西都在工作区  --mixed可以省略
+     git reset HEAD              把当前版本所有暂存区东西放到工作区 与上一条一样 HEAD表示当前版本commitID 
+    soft一般用作合并一些频繁的commit 方便log查看commit 
+    mixed一般用作提交过的东西出错需要修改时 
+
+    
 
  推送远程 
      git remote -v 查看所有主机名及地址 
@@ -42,4 +63,4 @@
 
   
      git push origin :远程分支名                 删除远程分支
-    1
+
