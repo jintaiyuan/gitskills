@@ -1,0 +1,163 @@
+.content {
+	margin: 25px auto;
+
+	width: 1154px;
+	
+	font-family:PingFangSC-Medium,PingFangSC;
+	font-weight:500;
+}
+.search_tittle {
+	display: flex;
+	
+	height: 16px;
+}
+.tittle_bg {
+	margin-right: 14px;
+
+	width: 5px;
+	height: 16px;
+	background-color: #6CD3CE;
+}
+.tittle_text {
+	height: 16px;
+
+	font-size: 14px;
+	color: #6CD3CE;
+	line-height: 16px
+}
+
+.search_area {
+	display: flex;
+	margin-top: 11px;
+
+	font-size: 12px;
+	font-family: PingFangSC-Regular,PingFangSC;
+	font-weight: 400;
+	color: rgba(149,149,149,1);
+}
+.search_area > div:not(:last-child){
+	margin-right: 20px;
+	padding-left: 9px;
+	position: relative;
+
+	width: 108px;
+	height: 26px;
+	
+	border:1px solid rgba(222,222,222,1);
+}
+.search_area input {
+	padding: 0;
+
+	width: 88px;
+	height: 25px;
+	border: 0
+}
+.search_area input:focus {
+	outline: none;
+}
+.search_button{
+	width: 100px;
+	height: 28px;
+
+    background:linear-gradient(180deg,rgba(60,214,207,1) 0%,rgba(39,192,185,1) 100%);
+    border-radius:4px;
+
+    font-size: 14px;
+    color: #FFF;
+    text-align: center;
+    line-height: 28px;
+
+    cursor: pointer;
+}
+.arrow {
+	position: absolute;
+	top: -1px;
+	right: -1px;
+
+	width: 22px;
+	height: 28px;
+
+	background-color: #3CD6CF;
+}
+.arrow > div {
+	height: 14px;
+	text-align: center;
+	line-height: 12px;
+}
+.arrow > div > img {
+	width: 10px;
+	height: 6px;
+}
+
+/*院校名单*/
+.order {
+	margin-top: 31px;
+}
+.addr_list {
+	display: flex;
+	flex-wrap: wrap;
+
+	font-size: 16px;
+	font-family: PingFangSC-Regular,PingFangSC;
+	font-weight: 400;
+	color: #313131;
+}
+.addr_item {
+	margin-top: 8px;
+	width: 48px;
+	height: 22px;
+
+	text-align: center;
+	line-height: 22px;
+	
+	cursor: pointer;
+}
+.addrChoosed {
+	background: #6CD3CE;
+	border-radius:3px;
+}
+.addr_list {
+	margin-left: 7px;
+}
+.addr_list div:not(:nth-child(15n+15)){
+	margin-right: 30px;
+}
+
+/*搜索结果*/
+.search_resault {
+	margin-top: 26px;
+	
+	font-size: 14px;
+}
+
+.t_head {
+	background-color: #3CBBB5;
+}
+.t_head > td {
+	padding: 0;
+	height: 40px;
+	
+	border-right: 1px solid #349C97;
+}
+
+.t_info > td,.score_low {
+	padding: 0;
+	height: 101px;
+	border-right: 1px solid #DBDEDE;
+	border-bottom: 1px solid #DBDEDE;
+}
+.t_info > td:nth-child(1){
+	border-left: 1px solid #DBDEDE;
+}
+
+.score_low {
+	height: 51px!important;
+}
+.head_wrap{
+	text-align: center;
+	font-size: 14px;
+	color: #FFF;
+}
+.info_wrap{
+	text-align: center;
+}
