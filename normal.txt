@@ -21,3 +21,12 @@ git branch -a      查看本地和远程的所有分支
 查看远程所有分支
 git branch -r   查看远程所有分支
 　　
+
+
+1.在~/.gitconfig目录下多出一个文件，用来记录你的密码和帐号
+
+git config --global credential.helper store
+2.再最后输入一次正确的用户名和密码，就可以成功的记录下来，这是最后一次麻烦啦！
+
+git pull
+　　
