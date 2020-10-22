@@ -96,7 +96,7 @@ git安装
      
      git push -u 主机名 本地分支:远程分支        建立追踪关系  建立与主机联系 后边可以省略主机名 
      git push -u 主机名 分支名                                 如果本地分支名=远程分支名可以只写一个名字
-     git branch --set-upstream test origin/test  建立(修改)追踪关系  建立本地仓test 并与远程主机origin的test分支建立追踪关系 
+     git branch --set-upstream-to = origin/test  建立(修改)追踪关系  建立本地仓test 并与远程主机origin的test分支建立追踪关系 
      
      git push                                    将现在所在分支推送到有追踪关系的远程分支  push之前可以git status查看是否关联主机
 
