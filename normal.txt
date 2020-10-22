@@ -12,3 +12,12 @@ git pull origin next:master  拉取远程origin主机上的next分支与本地master合并
 
 git push <远程主机名> <本地分支名>：<远程分支名>
 git push origin next:master  将本地next分支推送到远程origin上的master分支
+
+
+查看本地和远程的所有分支
+git branch -a      查看本地和远程的所有分支
+　　
+
+查看远程所有分支
+git branch -r   查看远程所有分支
+　　
